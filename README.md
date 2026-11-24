@@ -24,7 +24,7 @@ The report itself is a self-contained Jupyter notebook that is submitted separat
 - `data/results/training_history.csv` – the same curves for all 60 trained models in one table: `experiment, model, f, regime, seed, check, shots_seen` (E1 and E2 pretraining) or `epoch` (E2 training on real shots), `train_loss, val_ler, time_s`.
 - `data/results/models_summary.csv` – one row per trained model: parameters, simulated and real training shots, best validation LER, test LER and training time.
 
-The model weights (`.pt`) are not included. The two weights needed for the notebook's optional re-check are embedded in the notebook.
+The model weights (`.pt`) are not included; the notebook needs only the result tables, which it carries in its own metadata.
 
 Training details: AdamW (weight decay 1e-4), binary cross-entropy, linear warm-up then cosine decay, batch 1024 for simulated shots and 256 for real shots. The weights with the lowest validation LER are kept, and the test shots are never used for any choice. Hyperparameters were tuned once, at E1 f = 0 (`e1_tune.csv`), and then fixed. In E1 every model sees 10⁷ fresh Stim shots. In E2 the regimes are: real shots only; pretraining on `simple.dem` (2×10⁶ shots); pretraining then fine-tuning; pretraining on a calibrated prior (`simple.dem` probabilities × α = 3.31, α fitted on the training shots only; 10⁷ shots); and calibrated pretraining then fine-tuning.
 
