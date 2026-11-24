@@ -1,0 +1,61 @@
+{
+  "script": "src/run_e1_tune.py",
+  "p": 0.005,
+  "f": 0.0,
+  "n_train": 10000000,
+  "n_val": 200000,
+  "val_seed": 30000,
+  "train_seed_base": 50000,
+  "batch": 1024,
+  "optimizer": "AdamW wd=1e-4, 2% warmup + cosine",
+  "device": "mps",
+  "transformer": "d_model 64, 4 heads, d_ff 128, CLS, pre-norm",
+  "mlp": "hidden 256, GELU",
+  "configs": [
+    [
+      "transformer",
+      {
+        "n_layers": 2
+      },
+      0.0003
+    ],
+    [
+      "transformer",
+      {
+        "n_layers": 2
+      },
+      0.001
+    ],
+    [
+      "transformer",
+      {
+        "n_layers": 3
+      },
+      0.0003
+    ],
+    [
+      "transformer",
+      {
+        "n_layers": 3
+      },
+      0.001
+    ],
+    [
+      "mlp",
+      {
+        "n_layers": 3
+      },
+      0.0003
+    ],
+    [
+      "mlp",
+      {
+        "n_layers": 3
+      },
+      0.001
+    ]
+  ],
+  "stim": "1.16.0",
+  "torch": "2.15.0",
+  "numpy": "2.5.3"
+}

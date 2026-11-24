@@ -1,0 +1,39 @@
+{
+  "script": "src/run_e1_nn_fscan.py",
+  "p": 0.005,
+  "f_values": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "n_test": 1000000,
+  "n_val": 200000,
+  "n_train": 10000000,
+  "torch_seeds": [
+    0,
+    1,
+    2
+  ],
+  "test_seed_base": 20261121,
+  "val_seed_base": 30000,
+  "train_seed_formula": "TRAIN_SEED_BASE + 100*f_index + 10*model_index + torch_seed",
+  "hyperparameters": {
+    "transformer": {
+      "n_layers": 3,
+      "lr": 0.001
+    },
+    "mlp": {
+      "n_layers": 3,
+      "lr": 0.001
+    }
+  },
+  "batch": 1024,
+  "device": "mps",
+  "noise": "PLAN v1.2 \u00a71.2 fixed budget, XX+YY",
+  "mcnemar": "exact binomial, two-sided",
+  "stim": "1.16.0",
+  "torch": "2.15.0",
+  "numpy": "2.5.3"
+}

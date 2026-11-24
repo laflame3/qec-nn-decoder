@@ -1,0 +1,17 @@
+dem,decoder,correlated,model,regime,seed,n_shots,ler
+simple,PM,False,,,,200000,0.02941
+simple,PM-corr,True,,,,200000,0.024195
+simple,NN,,transformer,pre0,0,200000,0.04173
+simple,NN,,transformer,pre0,1,200000,0.04172
+simple,NN,,transformer,pre0,2,200000,0.04367
+simple,NN,,mlp,pre0,0,200000,0.0378
+simple,NN,,mlp,pre0,1,200000,0.038
+simple,NN,,mlp,pre0,2,200000,0.036545
+simple_cal,PM,False,,,,200000,0.20811
+simple_cal,PM-corr,True,,,,200000,0.192015
+simple_cal,NN,,transformer,pcal,0,200000,0.203005
+simple_cal,NN,,transformer,pcal,1,200000,0.20494
+simple_cal,NN,,transformer,pcal,2,200000,0.20518
+simple_cal,NN,,mlp,pcal,0,200000,0.216155
+simple_cal,NN,,mlp,pcal,1,200000,0.21472
+simple_cal,NN,,mlp,pcal,2,200000,0.21824

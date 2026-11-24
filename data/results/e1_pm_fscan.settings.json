@@ -1,0 +1,20 @@
+{
+  "script": "src/run_e1_pm_fscan.py",
+  "p": 0.005,
+  "f_values": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "shots": 1000000,
+  "seed_base": 20261121,
+  "distance": 3,
+  "rounds": 3,
+  "basis": "Z",
+  "noise": "PLAN v1.2 \u00a71.2: fixed budget 9p per round, XX+YY on 12 adjacent pairs",
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.5.3"
+}

@@ -1,0 +1,172 @@
+{
+  "script": "src/run_e2_sycamore.py",
+  "out_suffix": "",
+  "packet_file_sha256": {
+    "DATA_README.md": "4b9812e74e53f096a490c4c37aacd439858364191d8e500ce8a7ad563b79db30",
+    "circuit_ideal.stim": "a45f6fd7d9b2da7c4896783741baf5f5ab9684264c3382cbdc7a6466af4cc8a5",
+    "dems/correlations.dem": "70714790903d4a0fc4254890011ef14cdb70fc1e7a7ff85c4416a61f7199ba91",
+    "dems/rl_isolated_belief_matching.dem": "ac0aa63735f869bd838653ad7a810d28309035d8d39dfbf03a11dedc6d5608f8",
+    "dems/rl_isolated_correlated_matching.dem": "9866459695f6b161b71c5074c4eb505052363cb0f65a3049e33105c402eea1f1",
+    "dems/rl_isolated_harmony.dem": "73464685ce2f5dffa6c9806bc2f85ce7caec3cdc8c4da7936326ae8c992e0593",
+    "dems/rl_shared_belief_matching.dem": "bfe4cd34b85c38d3b1d49b1061d09650925f27864af451795753d3573fa79cb9",
+    "dems/rl_shared_correlated_matching.dem": "cb2b6634f2cb4bdbddb59fdb4d0a06eea14bb9232ed76a42e688783017bbee3c",
+    "dems/rl_shared_harmony.dem": "bf2bce3b7a42beec7d59abfce419b72c36f7da4ca70c932dcc4ca8ff4c237961",
+    "dems/simple.dem": "ca721f870965a0b913249ec4feb66d7990c795b9a4dadc917d4dd17e5ae086c2",
+    "metadata.json": "fb84d3937c1ef0ba993dbf04980b5e9ca2d7e658ea3200d18a09c79939509ada",
+    "r05.npz": "72bde41915d2cd19b77cf8c75858b854925c0af6fd715d545f65e110b63ca255"
+  },
+  "packet_sha256": "91b2730f4dbfdff27b437980f9b1ae79814528b9659d37e0160e965cec215ed4",
+  "e1_tune_sha256": "2e3f4691fde441cbbfcc2f2ac20e062e214f96a3b366cce93ee9703b6da444b8",
+  "split_seed": 20261123,
+  "n_train": 45000,
+  "n_val": 7500,
+  "n_test": 22500,
+  "n_shots": 75000,
+  "n_detectors": 56,
+  "drift_block": 5000,
+  "torch_seed": "run seed, reset before constructing each model",
+  "dem_seed": "run seed, shared by both models",
+  "pretrain_dem": "simple",
+  "hparams": {
+    "transformer": {
+      "n_layers": 3,
+      "lr": 0.001
+    },
+    "mlp": {
+      "n_layers": 3,
+      "lr": 0.001
+    }
+  },
+  "detector_layout": {
+    "n_stabs": 12,
+    "n_rounds": 8,
+    "final_stabs": [
+      1,
+      5,
+      7,
+      10
+    ]
+  },
+  "eval_batch": 1024,
+  "architecture": {
+    "transformer": {
+      "d_model": 64,
+      "n_heads": 4,
+      "d_ff": 128,
+      "dropout": 0.0
+    },
+    "mlp": {
+      "hidden": 256,
+      "activation": "GELU"
+    }
+  },
+  "optimizer": "AdamW",
+  "loss": "BCEWithLogitsLoss",
+  "weight_decay": 0.0001,
+  "lr_schedule": "linear warmup then cosine decay over planned optimizer steps",
+  "pre0": {
+    "n_pretrain": 2000000,
+    "batch": 1024,
+    "val_every_shots": 200000,
+    "warmup": 0.02
+  },
+  "real": {
+    "max_epochs": 50,
+    "batch": 256,
+    "patience": 10,
+    "warmup": 0.02
+  },
+  "ft": {
+    "max_epochs": 30,
+    "batch": 256,
+    "patience": 8,
+    "lr": 0.0001,
+    "warmup": 0.05,
+    "validate_epoch_zero": true
+  },
+  "pcal": {
+    "n_pretrain": 10000000,
+    "batch": 1024,
+    "val_every_shots": 500000,
+    "warmup": 0.02,
+    "dem": "simple_cal"
+  },
+  "ftcal": {
+    "same_training_as": "ft",
+    "initialized_from": "pcal"
+  },
+  "calibration": {
+    "source_dem": "simple",
+    "dem": "simple_cal",
+    "fit_split": "train",
+    "alpha": 3.3125,
+    "target_mean_lit_detectors": 7.544111111111111,
+    "original_mean_lit_detectors": 2.510285,
+    "achieved_mean_lit_detectors": 7.509295,
+    "relative_error": 0.00461500508122604,
+    "relative_tolerance": 0.01,
+    "seed": 20261124,
+    "shots_per_probe": 200000,
+    "max_error_probability": 0.5,
+    "file": "e2_simple_cal.dem",
+    "sha256": "4737d161d152be9c75dad392c0ed21d06d05a3aff03494e8b15f5ee0386db3c2"
+  },
+  "sim_check": {
+    "seed": 20261125,
+    "shots_per_dem": 200000,
+    "dem_regimes": {
+      "simple": "pre0",
+      "simple_cal": "pcal"
+    }
+  },
+  "test_comparators": {
+    "pm_simple": "PM+simple",
+    "pm_corr_simple": "PM-corr+simple",
+    "pm_corr_correlations": "PM-corr+correlations",
+    "google_correlated_matching_rl_isolated": "Google correlated_matching+rl_isolated_correlated_matching",
+    "google_best": "Google harmony+rl_isolated_harmony",
+    "pm_corr_simple_cal": "PM-corr+simple_cal"
+  },
+  "mcnemar": "two-sided exact binomial",
+  "pm_dems": [
+    "simple",
+    "correlations",
+    "rl_isolated_correlated_matching",
+    "rl_shared_correlated_matching"
+  ],
+  "google_decoders": [
+    "correlated_matching",
+    "belief_matching",
+    "harmony"
+  ],
+  "baseline_correlated_column": "PyMatching correlation flag; blank for Google predictions",
+  "packed_bitorder": "big",
+  "device": "mps",
+  "torch_cpu_threads": 4,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "torch": "2.15.0",
+    "scipy": "1.18.1"
+  },
+  "selection": {
+    "models": [
+      "mlp",
+      "transformer"
+    ],
+    "regimes": [
+      "ft",
+      "pre0",
+      "real",
+      "ftcal",
+      "pcal"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  }
+}

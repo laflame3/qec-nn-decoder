@@ -1,0 +1,36 @@
+name,family,dem,decoder,correlated,prior_fitted_on_this_data,ler_test,se_test,ler_all
+none,none,,constant_zero,False,False,0.29973333333333335,0.0030542739615330456,0.2971066666666667
+PM+simple,pm,simple,pymatching,False,False,0.17417777777777776,0.002528415221756047,0.17513333333333334
+PM-corr+simple,pm,simple,pymatching,True,False,0.15977777777777777,0.002442665570470759,0.1614
+PM+correlations,pm,correlations,pymatching,False,unknown,0.15973333333333334,0.0024423904097380187,0.15973333333333334
+PM-corr+correlations,pm,correlations,pymatching,True,unknown,0.142,0.00232700093109851,0.14392
+PM+rl_isolated_correlated_matching,pm,rl_isolated_correlated_matching,pymatching,False,unknown,0.15991111111111111,0.0024434906511820883,0.16217333333333334
+PM-corr+rl_isolated_correlated_matching,pm,rl_isolated_correlated_matching,pymatching,True,unknown,0.14982222222222222,0.002379313850210857,0.1528
+PM+rl_shared_correlated_matching,pm,rl_shared_correlated_matching,pymatching,False,unknown,0.1701777777777778,0.0025052593720535214,0.17149333333333333
+PM-corr+rl_shared_correlated_matching,pm,rl_shared_correlated_matching,pymatching,True,unknown,0.15915555555555555,0.002438807219308087,0.15996
+Google correlated_matching+correlations,google,correlations,correlated_matching,,unknown,0.14542222222222223,0.002350173511383294,0.14724
+Google belief_matching+correlations,google,correlations,belief_matching,,unknown,0.14048888888888889,0.0023166236061960164,0.14310666666666666
+Google harmony+correlations,google,correlations,harmony,,unknown,0.13826666666666668,0.0023011977128400436,0.14057333333333333
+Google correlated_matching+rl_isolated_belief_matching,google,rl_isolated_belief_matching,correlated_matching,,unknown,0.14786666666666667,0.0023664517794984453,0.14837333333333333
+Google belief_matching+rl_isolated_belief_matching,google,rl_isolated_belief_matching,belief_matching,,unknown,0.13857777777777777,0.002303369293341586,0.13957333333333333
+Google harmony+rl_isolated_belief_matching,google,rl_isolated_belief_matching,harmony,,unknown,0.14302222222222222,0.0023339700671491962,0.1438
+Google correlated_matching+rl_isolated_correlated_matching,google,rl_isolated_correlated_matching,correlated_matching,,unknown,0.13942222222222223,0.0023092438990846187,0.14192
+Google belief_matching+rl_isolated_correlated_matching,google,rl_isolated_correlated_matching,belief_matching,,unknown,0.14235555555555557,0.002329429604555346,0.14429333333333333
+Google harmony+rl_isolated_correlated_matching,google,rl_isolated_correlated_matching,harmony,,unknown,0.13844444444444445,0.0023024390955575166,0.14134666666666668
+Google correlated_matching+rl_isolated_harmony,google,rl_isolated_harmony,correlated_matching,,unknown,0.14062222222222223,0.0023175428831176273,0.14242666666666667
+Google belief_matching+rl_isolated_harmony,google,rl_isolated_harmony,belief_matching,,unknown,0.14164444444444443,0.002324567303128994,0.14289333333333334
+Google harmony+rl_isolated_harmony,google,rl_isolated_harmony,harmony,,unknown,0.13657777777777777,0.002289340403746233,0.13877333333333333
+Google correlated_matching+rl_shared_belief_matching,google,rl_shared_belief_matching,correlated_matching,,unknown,0.1452,0.002348682467540756,0.14773333333333333
+Google belief_matching+rl_shared_belief_matching,google,rl_shared_belief_matching,belief_matching,,unknown,0.13728888888888888,0.00229434715843133,0.14014666666666667
+Google harmony+rl_shared_belief_matching,google,rl_shared_belief_matching,harmony,,unknown,0.14244444444444446,0.0023300360005932006,0.14413333333333334
+Google correlated_matching+rl_shared_correlated_matching,google,rl_shared_correlated_matching,correlated_matching,,unknown,0.14275555555555555,0.0023321559592748816,0.14525333333333335
+Google belief_matching+rl_shared_correlated_matching,google,rl_shared_correlated_matching,belief_matching,,unknown,0.1452,0.002348682467540756,0.14722666666666667
+Google harmony+rl_shared_correlated_matching,google,rl_shared_correlated_matching,harmony,,unknown,0.13933333333333334,0.002308626869957845,0.14137333333333332
+Google correlated_matching+rl_shared_harmony,google,rl_shared_harmony,correlated_matching,,unknown,0.14444444444444443,0.0023435988177120553,0.14697333333333334
+Google belief_matching+rl_shared_harmony,google,rl_shared_harmony,belief_matching,,unknown,0.1429777777777778,0.0023336679078176594,0.1454
+Google harmony+rl_shared_harmony,google,rl_shared_harmony,harmony,,unknown,0.1408888888888889,0.0023193793219215947,0.14316
+Google correlated_matching+simple,google,simple,correlated_matching,,False,0.154,0.0024063249988312053,0.15698666666666666
+Google belief_matching+simple,google,simple,belief_matching,,False,0.15568888888888888,0.0024170676335448942,0.15608
+Google harmony+simple,google,simple,harmony,,False,0.1504,0.0023830870735245912,0.15358666666666668
+PM+simple_cal,pm,simple_cal,pymatching,False,train_only,0.18235555555555555,0.0025742486015973257,0.18348
+PM-corr+simple_cal,pm,simple_cal,pymatching,True,train_only,0.1680888888888889,0.0024929680153137203,0.16806666666666667
