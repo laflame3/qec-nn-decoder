@@ -1,0 +1,53 @@
+{
+  "google_reference": {
+    "name": "Google harmony+correlations",
+    "test_pl": 0.13826666666666668,
+    "validation_pl": 0.1344
+  },
+  "google_selection": "minimum validation P_L, tie broken by name",
+  "input_sha256": {
+    "data/e2_r05_packet/r05.npz": "72bde41915d2cd19b77cf8c75858b854925c0af6fd715d545f65e110b63ca255",
+    "data/results/e2_preds/baselines.npz": "a46d8aadf9d5e8558c0f5157ca9c3a61600d56398ddfb1460eefca761d406804",
+    "data/results/e2_preds/mlp_ft_s0.npy": "3911746c8b0eb649634495b6546e138ac73b59fe9e6d50910d527ea285c27e77",
+    "data/results/e2_preds/mlp_ft_s1.npy": "f881623c6d00c98ca4b9fa066ad41553a395573e6c0b54939d4e55b95451af47",
+    "data/results/e2_preds/mlp_ft_s2.npy": "6a38babaacbc36e64fd7c596acb5583b74bb3c1dec2327146866c191172c8d39",
+    "data/results/e2_preds/mlp_ftcal_s0.npy": "ffc3341e23206719d4f1a51b55a1703247a6c0739a2314b48883671e361762ed",
+    "data/results/e2_preds/mlp_ftcal_s1.npy": "3fafd118d3f4e3ebe8247b18437af4c6e5d33bda386bc6fa87d76372f5de0974",
+    "data/results/e2_preds/mlp_ftcal_s2.npy": "66d3db71a8006a61c4cc2d70666985d86e5c10f8038acac229b4666827a2c135",
+    "data/results/e2_preds/mlp_pcal_s0.npy": "8ff9dba9789b52f426f7e2659efb680f12ebd9e5cfea1a683dd04e53ece96edb",
+    "data/results/e2_preds/mlp_pcal_s1.npy": "6a1f1c0660b845e49efb4bd7e87adb0847bb314352ca66fdb2e94b2da0f6ecf9",
+    "data/results/e2_preds/mlp_pcal_s2.npy": "dafb8321fc33c84e341ca61a0e14187c27e13f0de47ba39ad7fc4cd2886b94fc",
+    "data/results/e2_preds/mlp_pre0_s0.npy": "5b793eb6803833f7ed9429b8c34f954c54735829893a80c9da8f35dcca1c3631",
+    "data/results/e2_preds/mlp_pre0_s1.npy": "1883f14786a87dd1daf09141ab4864eda6f139de9b9d7523d0f81ee9a3323473",
+    "data/results/e2_preds/mlp_pre0_s2.npy": "b5ffe17e3492a82cfbaa0fd1a2d53715b8712be5694bc42329c0cf44f98b0b45",
+    "data/results/e2_preds/mlp_real_s0.npy": "86bf0ac2577450796c10ba820b8eaddf1de575ddda19b8940c9da2e3c811014d",
+    "data/results/e2_preds/mlp_real_s1.npy": "b707ec16b50644e576e347fd848c67dd1f57556bd5d67cac3ac05da2a85e891c",
+    "data/results/e2_preds/mlp_real_s2.npy": "2bfe6d6c6fbe541895e5b228d5d0906bed855d0108a720e8326eb5a70974ec9f",
+    "data/results/e2_preds/transformer_ft_s0.npy": "5bb18e2adf166dbbbda6014d0e3f31f64012d189518c8470bb5b3e9940297483",
+    "data/results/e2_preds/transformer_ft_s1.npy": "532002f5c820d32dd0100dfaacfb078f4c5f3b5b1089ddb108c84017522141d5",
+    "data/results/e2_preds/transformer_ft_s2.npy": "f1f778c29d66609b8ac4335ea78b116448f6795b889ecc4f2561dc4b6a32eaea",
+    "data/results/e2_preds/transformer_ftcal_s0.npy": "b3357ee8016989b999be3aee72b3f65d97fd7df0131b0979d667475c1f4c47fc",
+    "data/results/e2_preds/transformer_ftcal_s1.npy": "9dd65a4096ce45f3a58e35427679f21f01bb3c30d8180c408e7179bbbb0a4ff7",
+    "data/results/e2_preds/transformer_ftcal_s2.npy": "095ec86ba26821f751d3b5649920ec36f95cada22418b0e34f73925db50b2cae",
+    "data/results/e2_preds/transformer_pcal_s0.npy": "87cf42a1c41f3efc9d6f7aa42f66e4cb35441e5a7c9e543e369a66830b9fea10",
+    "data/results/e2_preds/transformer_pcal_s1.npy": "532119bf1253bb82f95d4ae30d0f75a302b48517b3f1e8e29b5a8ea58bfce677",
+    "data/results/e2_preds/transformer_pcal_s2.npy": "3578f3b2155bb6b9b097123f044bd6cba0b74a01f7f58be50199eec04eebb55a",
+    "data/results/e2_preds/transformer_pre0_s0.npy": "6a92a2bc51ad5c07779766ee0aa74a6b15c3f91b166ea1ca0dc6c95a4bf0e100",
+    "data/results/e2_preds/transformer_pre0_s1.npy": "7cd5116cd56f579ffff919ba8331049b1364c15e6aff29dfd268bad281e13ea0",
+    "data/results/e2_preds/transformer_pre0_s2.npy": "8c2d81b2f730810b2dd0e25f5273c5c737bd0976fbc045bbd801f2a500f0ae74",
+    "data/results/e2_preds/transformer_real_s0.npy": "cde651d62aa21fe849bd6ec7869aa03d623170be94b136c1d50ac0d32c9b9fe9",
+    "data/results/e2_preds/transformer_real_s1.npy": "b8d70ad3bca9cbbb95b9557a41a50672a450d594911f15a3812cc7b3c6a5f21b",
+    "data/results/e2_preds/transformer_real_s2.npy": "e12ba17f0aa096e375a990b48a84b34ccedcd7716d25e9fc6fe56a51d212c443",
+    "data/results/e2_split.npz": "75868a777374c995836adada4bae781dd147ce3e0adcefac6b583bc247670170"
+  },
+  "main_baseline": "PM-corr+simple",
+  "n_test": 22500,
+  "n_val": 7500,
+  "script": "src/rescore_e2_v2.py",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "split_seed": 20261123
+}

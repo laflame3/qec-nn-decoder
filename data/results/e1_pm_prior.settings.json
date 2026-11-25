@@ -1,0 +1,15 @@
+{
+  "script": "src/run_e1_pm_prior.py",
+  "status": "post-hoc control, added after results were seen",
+  "decided": "2026-11-24, student",
+  "target": "correlated_memory_circuit(0.005, 1.0)",
+  "prior": "correlated_memory_circuit(0.005, 0.0)",
+  "decoder": "build_pm_correlated(prior circuit)",
+  "test_seed": 20261125,
+  "n_test": 1000000,
+  "nn_masks": "e1v2_preds/finetune_{kind}_{method}_s0.npy",
+  "python": "3.12.13",
+  "stim": "1.16.0",
+  "pymatching": "2.4.0",
+  "numpy": "2.5.3"
+}

@@ -1,0 +1,96 @@
+{
+  "batch": 1024,
+  "decay": "cosine",
+  "device": "mps",
+  "eval_batch": 4096,
+  "experiment": "datasize",
+  "external_pool_sha256": "670ef6485822fc5b9df349318167295d3304a2bfe811b413a1b37227d0c6c6f3",
+  "external_pool_size": 3900000,
+  "google_reference": {
+    "name": "Google harmony+correlations",
+    "test_pl": 0.13826666666666668,
+    "validation_pl": 0.1344
+  },
+  "google_selection": "minimum validation P_L, tie broken by name",
+  "hyperparameters": {
+    "mlp": {
+      "lr": 0.001,
+      "n_layers": 3
+    },
+    "transformer": {
+      "lr": 0.001,
+      "n_layers": 3
+    }
+  },
+  "input_sha256": {
+    "data/e2_r05_packet/circuit_ideal.stim": "a45f6fd7d9b2da7c4896783741baf5f5ab9684264c3382cbdc7a6466af4cc8a5",
+    "data/e2_r05_packet/r05.npz": "72bde41915d2cd19b77cf8c75858b854925c0af6fd715d545f65e110b63ca255",
+    "data/results/e1_tune.csv": "2e3f4691fde441cbbfcc2f2ac20e062e214f96a3b366cce93ee9703b6da444b8",
+    "data/results/e2_preds/baselines.npz": "a46d8aadf9d5e8558c0f5157ca9c3a61600d56398ddfb1460eefca761d406804",
+    "data/results/e2_split.npz": "75868a777374c995836adada4bae781dd147ce3e0adcefac6b583bc247670170"
+  },
+  "loss": "BCEWithLogitsLoss",
+  "max_epochs": {
+    "1000000": 10,
+    "150000": 50,
+    "2000000": 5,
+    "3945000": 2,
+    "45000": 50,
+    "500000": 20
+  },
+  "n_from_sample14": {
+    "1000000": 11468,
+    "150000": 1809,
+    "2000000": 22863,
+    "3945000": 45000,
+    "45000": 529,
+    "500000": 5828
+  },
+  "n_pool": 3945000,
+  "n_test": 22500,
+  "n_val": 7500,
+  "numpy_version": "2.5.3",
+  "optimizer": "AdamW",
+  "pm_baseline": "PM-corr+simple",
+  "pm_reference": "PM+simple",
+  "pool_seed": 20261126,
+  "prediction_bits": "packbits, big",
+  "prefix_hash_rule": "SHA-256 of unpacked bool detector bytes followed by bool obs bytes in C order",
+  "prefix_sha256": {
+    "1000000": "a783f50ad065bfe7d3645dc96b79a39f87a1939aa9967e7898770a1c7b55ef1e",
+    "150000": "7d8daff5b70cfe3f167bfc13e064bff9b869a352367859642d2005dc6cec4739",
+    "2000000": "3aacbd4eb06fb795d50eb538779d18ae64c9c27c175e2207af3b6f0cf5969dea",
+    "3945000": "c5862435947c6b2e000d937b2d25c581c081a917275edd1546bb7dbf19937a43",
+    "45000": "3c1f7609aaf6115719b588a2eb31a144bdc3f2823f8b8efa3bf8eddcb391b497",
+    "500000": "2a42e48b1bbc3ceb691d6019fbe78a34a4f9bf4ae4a30eb34a284795a8cf8002"
+  },
+  "script": "src/run_e2_v2.py",
+  "sizes_by_model": {
+    "mlp": [
+      45000,
+      150000,
+      500000,
+      1000000,
+      2000000,
+      3945000
+    ],
+    "transformer": [
+      45000,
+      500000,
+      3945000
+    ]
+  },
+  "smoke": false,
+  "split_seed": 20261123,
+  "target_sample": 14,
+  "torch_seed": 0,
+  "torch_threads": 4,
+  "torch_version": "2.15.0",
+  "train": {
+    "patience": 10,
+    "warmup_fraction": 0.02
+  },
+  "train_budget": 10000000,
+  "validation_selection": "earliest minimum validation P_L",
+  "weight_decay": 0.0001
+}

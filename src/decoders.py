@@ -162,3 +162,16 @@ def decode_all(decoders, detectors):
         pred = matcher.decode_batch(detectors, enable_correlations=corr)
         out[name] = np.asarray(pred[:, 0], dtype=bool)
     return out
+
+
+def build_pm_correlated(circuit):
+    """Build the single E1 v2 baseline from the generating circuit."""
+    return pymatching.Matching.from_detector_error_model(
+        basis_decomposed_dem(circuit), enable_correlations=True,
+    )
+
+
+def decode_pm_correlated(matcher, det):
+    """Decode one logical bit per shot."""
+    pred = matcher.decode_batch(det, enable_correlations=True)
+    return np.asarray(pred[:, 0], dtype=bool)

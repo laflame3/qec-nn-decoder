@@ -1,0 +1,67 @@
+transformer pretrain_zero_shot
+  epoch=1 val_P_L=0.16813
+  epoch=2 val_P_L=0.15933
+saved transformer / pretrain_zero_shot / external_sycamore_samples / 3900000 / 0 / 0 / trained P_L=0.15858
+transformer finetune_45k
+  epoch=0 val_P_L=0.15933
+  epoch=1 val_P_L=0.15773
+  epoch=2 val_P_L=0.16040
+  epoch=3 val_P_L=0.15947
+  epoch=4 val_P_L=0.15867
+  epoch=5 val_P_L=0.15907
+  epoch=6 val_P_L=0.16120
+  epoch=7 val_P_L=0.16227
+  epoch=8 val_P_L=0.16187
+  epoch=9 val_P_L=0.16027
+saved transformer / finetune_45k / external_sycamore_samples / 3900000 / 45000 / 0 / trained P_L=0.15569
+transformer scratch_45k_sample14
+  epoch=1 val_P_L=0.29533
+  epoch=2 val_P_L=0.30547
+  epoch=3 val_P_L=0.29413
+  epoch=4 val_P_L=0.28720
+  epoch=5 val_P_L=0.27520
+  epoch=6 val_P_L=0.26893
+  epoch=7 val_P_L=0.25720
+  epoch=8 val_P_L=0.25253
+  epoch=9 val_P_L=0.24640
+  epoch=10 val_P_L=0.24653
+  epoch=11 val_P_L=0.24413
+  epoch=12 val_P_L=0.23987
+  epoch=13 val_P_L=0.24107
+  epoch=14 val_P_L=0.23987
+  epoch=15 val_P_L=0.23680
+  epoch=16 val_P_L=0.23653
+  epoch=17 val_P_L=0.24267
+  epoch=18 val_P_L=0.23667
+  epoch=19 val_P_L=0.23680
+  epoch=20 val_P_L=0.23320
+  epoch=21 val_P_L=0.22667
+  epoch=22 val_P_L=0.22693
+  epoch=23 val_P_L=0.23173
+  epoch=24 val_P_L=0.23027
+  epoch=25 val_P_L=0.22800
+  epoch=26 val_P_L=0.22973
+  epoch=27 val_P_L=0.22853
+  epoch=28 val_P_L=0.22707
+  epoch=29 val_P_L=0.22507
+  epoch=30 val_P_L=0.22880
+  epoch=31 val_P_L=0.23280
+  epoch=32 val_P_L=0.22707
+  epoch=33 val_P_L=0.22467
+  epoch=34 val_P_L=0.22827
+  epoch=35 val_P_L=0.22907
+  epoch=36 val_P_L=0.22587
+  epoch=37 val_P_L=0.23107
+  epoch=38 val_P_L=0.23000
+  epoch=39 val_P_L=0.23227
+  epoch=40 val_P_L=0.23213
+  epoch=41 val_P_L=0.22867
+  epoch=42 val_P_L=0.23080
+  epoch=43 val_P_L=0.23027
+saved transformer / scratch_45k_sample14 / none / 0 / 45000 / 0 / trained P_L=0.22062
+transformer legacy_pre0_s0
+saved transformer / legacy_pre0_s0 / simple.dem / 2000000 / 0 / 0 / reused_e2_v1 P_L=0.21720
+transformer legacy_ft_s0
+saved transformer / legacy_ft_s0 / simple.dem / 2000000 / 45000 / 0 / reused_e2_v1 P_L=0.20858
+transformer legacy_real_s0
+saved transformer / legacy_real_s0 / none / 0 / 45000 / 0 / reused_e2_v1 P_L=0.19684

@@ -1,0 +1,95 @@
+{
+  "background_channels": [
+    "after_clifford_depolarization",
+    "after_reset_flip_probability",
+    "before_measure_flip_probability"
+  ],
+  "basis": "Z",
+  "batch": 1024,
+  "circuit": "surface_code:rotated_memory_z",
+  "decay": "cosine",
+  "device": "mps",
+  "distance": 3,
+  "epoch_order": "torch.randperm on CPU before transfer to training device",
+  "evaluate_epoch_zero": true,
+  "evaluation_batch": 4096,
+  "finetune_lr": 0.0001,
+  "fixed_train_steps": "max_epochs * ceil(n_target_shots / batch)",
+  "full_source": "legacy f=1 masks and CSV",
+  "hyperparameters": {
+    "mlp": {
+      "lr": 0.001,
+      "n_layers": 3
+    },
+    "transformer": {
+      "lr": 0.001,
+      "n_layers": 3
+    }
+  },
+  "legacy_epochs": "single streaming pass with validation by chunk",
+  "legacy_f0_train_seeds": {
+    "mlp": 40010,
+    "transformer": 40000
+  },
+  "legacy_f1_train_seeds": {
+    "mlp": 40410,
+    "transformer": 40400
+  },
+  "legacy_train_shots": 10000000,
+  "loss": "BCEWithLogitsLoss",
+  "max_epochs": 30,
+  "methods": [
+    "zero_shot",
+    "scratch_45k",
+    "finetune_45k",
+    "full_1e7"
+  ],
+  "n_detectors": 24,
+  "n_pool": 5000000,
+  "n_test": 1000000,
+  "n_val": 200000,
+  "optimizer": "AdamW",
+  "p_bg": 0.005,
+  "patience": 8,
+  "pm": {
+    "dem": "basis_decomposed_dem",
+    "enable_correlations": true,
+    "name": "PM-correlated"
+  },
+  "pm_test_source": "legacy f=1 with truth assertion",
+  "pool_seed": 74000,
+  "prediction_bits": "NumPy packbits with big bit order",
+  "prediction_rule": "logit > 0",
+  "prefix_hash_rule": "SHA-256 of detector bytes followed by observable bytes in C order",
+  "prefix_sha256": {
+    "45000": "613438771273056722930cfec299dfc493300f0da1a65edfdace85c2133b9b7d"
+  },
+  "prefix_sizes": [
+    45000
+  ],
+  "pretrain_f": 0.0,
+  "rounds": 3,
+  "script": "src/run_e1_finetune.py",
+  "smoke": false,
+  "statistics": {
+    "delta": "paired NN minus PM, 95% Wald CI",
+    "mcnemar": "exact binomial, two-sided",
+    "ratio": "paired delta method, 95% CI"
+  },
+  "target_f": 1.0,
+  "target_shots": 45000,
+  "test_seed": 20261125,
+  "torch_seed": 0,
+  "val_seed": 30004,
+  "validation_selection": "earliest minimum validation P_L",
+  "versions": {
+    "numpy": "2.5.3",
+    "pymatching": "2.4.0",
+    "python": "3.12.13",
+    "scipy": "1.18.1",
+    "stim": "1.16.0",
+    "torch": "2.15.0"
+  },
+  "warmup_fraction": 0.05,
+  "weight_decay": 0.0001
+}

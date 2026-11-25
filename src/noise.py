@@ -116,3 +116,73 @@ def hyperedge_fraction(dem):
         if n_det > 2:
             hyper += prob
     return hyper / total if total else 0.0
+
+
+def structure_memory_circuit(kind, idle_prob, p_bg=0.005, distance=3, rounds=3):
+    """Replace the before-round idle noise with one Pauli structure."""
+    if kind not in ("DEP", "X", "Y", "XX", "YY"):
+        raise ValueError(f"unknown idle noise structure: {kind}")
+    if not 0 <= idle_prob <= 1:
+        raise ValueError("idle_prob must be in [0, 1]")
+
+    template = stim.Circuit.generated(
+        "surface_code:rotated_memory_z",
+        distance=distance,
+        rounds=rounds,
+        after_clifford_depolarization=p_bg,
+        after_reset_flip_probability=p_bg,
+        before_measure_flip_probability=p_bg,
+        before_round_data_depolarization=_MARKER,
+    )
+    data, pairs = _data_qubits_and_pairs(template)
+
+    def replace_marker(block):
+        out = stim.Circuit()
+        for inst in block:
+            if isinstance(inst, stim.CircuitRepeatBlock):
+                out.append(stim.CircuitRepeatBlock(inst.repeat_count, replace_marker(inst.body_copy())))
+            elif inst.name != "DEPOLARIZE1" or inst.gate_args_copy() != [_MARKER]:
+                out.append(inst)
+            elif idle_prob:
+                if kind == "DEP":
+                    out.append("DEPOLARIZE1", data, idle_prob)
+                elif len(kind) == 1:
+                    out.append(f"{kind}_ERROR", data, idle_prob)
+                else:
+                    for a, b in pairs:
+                        targets = [stim.target_pauli(a, kind[0]), stim.target_pauli(b, kind[0])]
+                        out.append("CORRELATED_ERROR", targets, idle_prob)
+        return out
+
+    return replace_marker(template), {
+        "kind": kind, "idle_prob": idle_prob, "p_bg": p_bg,
+        "n_data": len(data), "n_pairs": len(pairs),
+    }
+
+
+def mean_detection_density(circuit, shots, seed):
+    """Mean number of lit detectors per shot."""
+    det = circuit.compile_detector_sampler(seed=seed).sample(shots)
+    return float(det.sum() / shots)
+
+
+def calibrate_idle_prob(kind, target, shots, seed, p_bg=0.005):
+    """Bisect the geometric midpoint with fresh samplers sharing one seed."""
+    low, high = 1e-4, 5e-2
+    trials = []
+    for _ in range(40):
+        prob = (low * high) ** 0.5
+        circuit, _ = structure_memory_circuit(kind, prob, p_bg)
+        density = mean_detection_density(circuit, shots, seed)
+        error = abs(density - target) / target
+        trials.append({"idle_prob": prob, "density": density, "relative_error": error})
+        if error < 0.002:
+            break
+        if density < target:
+            low = prob
+        else:
+            high = prob
+    best = min(trials, key=lambda trial: trial["relative_error"])
+    if best["relative_error"] >= 0.01:
+        raise ValueError(f"{kind} calibration missed target {target:.6f}: best trial {best}")
+    return best["idle_prob"], {**best, "target": target, "shots": shots, "seed": seed, "trials": trials}

@@ -1,0 +1,61 @@
+transformer n_train_unique=45,000
+  epoch=1 val_P_L=0.29640
+  epoch=2 val_P_L=0.30320
+  epoch=3 val_P_L=0.29120
+  epoch=4 val_P_L=0.29147
+  epoch=5 val_P_L=0.29320
+  epoch=6 val_P_L=0.27027
+  epoch=7 val_P_L=0.25907
+  epoch=8 val_P_L=0.26240
+  epoch=9 val_P_L=0.25893
+  epoch=10 val_P_L=0.24933
+  epoch=11 val_P_L=0.25027
+  epoch=12 val_P_L=0.25253
+  epoch=13 val_P_L=0.24560
+  epoch=14 val_P_L=0.24267
+  epoch=15 val_P_L=0.23813
+  epoch=16 val_P_L=0.24467
+  epoch=17 val_P_L=0.24187
+  epoch=18 val_P_L=0.24533
+  epoch=19 val_P_L=0.23707
+  epoch=20 val_P_L=0.23600
+  epoch=21 val_P_L=0.23320
+  epoch=22 val_P_L=0.23680
+  epoch=23 val_P_L=0.23013
+  epoch=24 val_P_L=0.23827
+  epoch=25 val_P_L=0.23933
+  epoch=26 val_P_L=0.23413
+  epoch=27 val_P_L=0.23733
+  epoch=28 val_P_L=0.23373
+  epoch=29 val_P_L=0.23547
+  epoch=30 val_P_L=0.23333
+  epoch=31 val_P_L=0.23693
+  epoch=32 val_P_L=0.23573
+  epoch=33 val_P_L=0.23827
+saved transformer / 45000 / 50 / 0 P_L=0.22729
+transformer n_train_unique=500,000
+  epoch=1 val_P_L=0.25493
+  epoch=2 val_P_L=0.23000
+  epoch=3 val_P_L=0.21867
+  epoch=4 val_P_L=0.20600
+  epoch=5 val_P_L=0.18640
+  epoch=6 val_P_L=0.18253
+  epoch=7 val_P_L=0.17387
+  epoch=8 val_P_L=0.16920
+  epoch=9 val_P_L=0.18213
+  epoch=10 val_P_L=0.16507
+  epoch=11 val_P_L=0.16280
+  epoch=12 val_P_L=0.16173
+  epoch=13 val_P_L=0.16147
+  epoch=14 val_P_L=0.15707
+  epoch=15 val_P_L=0.15827
+  epoch=16 val_P_L=0.15773
+  epoch=17 val_P_L=0.15600
+  epoch=18 val_P_L=0.15693
+  epoch=19 val_P_L=0.15827
+  epoch=20 val_P_L=0.15760
+saved transformer / 500000 / 20 / 0 P_L=0.15587
+transformer n_train_unique=3,945,000
+  epoch=1 val_P_L=0.16400
+  epoch=2 val_P_L=0.15733
+saved transformer / 3945000 / 2 / 0 P_L=0.15618

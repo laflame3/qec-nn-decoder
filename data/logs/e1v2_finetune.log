@@ -1,0 +1,55 @@
+saved transformer / zero_shot / 0 / 0 P_L=0.04046
+saved mlp / zero_shot / 0 / 0 P_L=0.04081
+saved transformer / scratch_45k / 45000 / 0 P_L=0.03983
+saved mlp / scratch_45k / 45000 / 0 P_L=0.03910
+  epoch=0 val_P_L=0.04006
+  epoch=1 val_P_L=0.03663
+  epoch=2 val_P_L=0.03705
+  epoch=3 val_P_L=0.03633
+  epoch=4 val_P_L=0.03644
+  epoch=5 val_P_L=0.03642
+  epoch=6 val_P_L=0.03643
+  epoch=7 val_P_L=0.03610
+  epoch=8 val_P_L=0.03644
+  epoch=9 val_P_L=0.03613
+  epoch=10 val_P_L=0.03611
+  epoch=11 val_P_L=0.03619
+  epoch=12 val_P_L=0.03614
+  epoch=13 val_P_L=0.03624
+  epoch=14 val_P_L=0.03616
+  epoch=15 val_P_L=0.03626
+saved transformer / finetune_45k / 45000 / 0 P_L=0.03667
+  epoch=0 val_P_L=0.04028
+  epoch=1 val_P_L=0.03984
+  epoch=2 val_P_L=0.03741
+  epoch=3 val_P_L=0.03707
+  epoch=4 val_P_L=0.03737
+  epoch=5 val_P_L=0.03741
+  epoch=6 val_P_L=0.03716
+  epoch=7 val_P_L=0.03692
+  epoch=8 val_P_L=0.03703
+  epoch=9 val_P_L=0.03678
+  epoch=10 val_P_L=0.03676
+  epoch=11 val_P_L=0.03692
+  epoch=12 val_P_L=0.03669
+  epoch=13 val_P_L=0.03676
+  epoch=14 val_P_L=0.03671
+  epoch=15 val_P_L=0.03673
+  epoch=16 val_P_L=0.03669
+  epoch=17 val_P_L=0.03665
+  epoch=18 val_P_L=0.03662
+  epoch=19 val_P_L=0.03660
+  epoch=20 val_P_L=0.03660
+  epoch=21 val_P_L=0.03662
+  epoch=22 val_P_L=0.03657
+  epoch=23 val_P_L=0.03660
+  epoch=24 val_P_L=0.03660
+  epoch=25 val_P_L=0.03661
+  epoch=26 val_P_L=0.03657
+  epoch=27 val_P_L=0.03660
+  epoch=28 val_P_L=0.03658
+  epoch=29 val_P_L=0.03658
+  epoch=30 val_P_L=0.03658
+saved mlp / finetune_45k / 45000 / 0 P_L=0.03667
+saved transformer / full_1e7 / 10000000 / 0 P_L=0.03523
+saved mlp / full_1e7 / 10000000 / 0 P_L=0.03576

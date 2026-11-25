@@ -1,0 +1,163 @@
+{
+  "batch": 1024,
+  "blocks": {
+    "test": [
+      4
+    ],
+    "train": [
+      0,
+      1,
+      2
+    ],
+    "val": [
+      3
+    ]
+  },
+  "cpu_threads": null,
+  "curve_order": "concatenate in PUB order, then one shuffled nested prefix per tau",
+  "curve_seed_base": 85000,
+  "curve_sizes": [
+    6000,
+    20000,
+    60000
+  ],
+  "device": "mps",
+  "eval_batch": 4096,
+  "experiment": "graph",
+  "hparams": {
+    "mlp": {
+      "lr": 0.001,
+      "n_layers": 3
+    },
+    "transformer": {
+      "lr": 0.001,
+      "n_layers": 3
+    }
+  },
+  "input_sha256": {
+    "e3_ibm_v2_job.json": "03f898678ec1411e2c337d35e84d432faff4b41003584661ae4a4ecba39f55dd",
+    "e3_ibm_v2_raw.npz": "0b97ce7716f4bfb8fbf32b734c011f44b081fdd1911926354aa7ad9e39c8f623"
+  },
+  "job_id": "dc30n2mq4uuc73a63geg",
+  "layout": {
+    "rnd": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7,
+      7,
+      8,
+      8,
+      9,
+      9
+    ],
+    "stab": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  "mask_format": "NumPy packbits, big bit order",
+  "n_detectors": 20,
+  "nn_inputs": "20 detectors",
+  "observable": "final d0 XOR initial logical state",
+  "optimizer": "AdamW, linear warmup and cosine decay",
+  "pm": {
+    "correlations": "graphlike repetition code without hyperedges, PM-correlated equals ordinary PM",
+    "fit": "training shots only, both initial states pooled",
+    "p_uniform": 0.01
+  },
+  "prediction_rule": "logit > 0",
+  "pretrain_validation": "real validation block",
+  "real_mask_order": "original PUB order then original shot order within each PUB",
+  "rounds": 9,
+  "row_keys": [
+    "tau",
+    "model"
+  ],
+  "script": "src/run_e3_v2.py",
+  "sim_draw_sizes": {
+    "pretrain": 1000000,
+    "test": 200000,
+    "train": 60000,
+    "val": 20000
+  },
+  "sim_labels": "Stim DEM observable L0; even detector boundary edges carry L0",
+  "sim_seed_bases": {
+    "pretrain": 84000,
+    "test": 83000,
+    "train": 81000,
+    "val": 82000
+  },
+  "sim_seed_rule": "seed base + tau in microseconds",
+  "sim_train_used": 60000,
+  "smoke": false,
+  "statistics": {
+    "delta": "paired NN minus PM, 95% Wald CI",
+    "mcnemar": "two-sided exact binomial",
+    "ratio": "paired delta method, 95% CI"
+  },
+  "taus_us": [
+    0,
+    5,
+    15
+  ],
+  "torch_seed": 0,
+  "training_recipes": {
+    "finetune": {
+      "evaluate_initial": true,
+      "lr": 0.0001,
+      "max_epochs": 30,
+      "patience": 8,
+      "warmup_fraction": 0.05
+    },
+    "pretrain": {
+      "max_epochs": 1,
+      "patience": 10,
+      "warmup_fraction": 0.02
+    },
+    "scratch": {
+      "max_epochs": 50,
+      "patience": 10,
+      "warmup_fraction": 0.02
+    }
+  },
+  "validation_selection": "earliest minimum validation P_L",
+  "versions": {
+    "numpy": "2.5.3",
+    "pymatching": "2.4.0",
+    "python": "3.12.13",
+    "scipy": "1.18.1",
+    "stim": "1.16.0",
+    "torch": "2.15.0"
+  },
+  "weight_decay": 0.0001
+}

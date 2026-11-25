@@ -1,0 +1,416 @@
+{
+  "job_id": "dc30n2mq4uuc73a63geg",
+  "backend": "ibm_kingston",
+  "submitted_utc": "2026-11-24T22:11:22+00:00",
+  "pending_jobs_at_submit": 1,
+  "rounds": 9,
+  "taus_us": [
+    0,
+    5,
+    15
+  ],
+  "logicals": [
+    0,
+    1
+  ],
+  "n_blocks": 5,
+  "block_shots": 10000,
+  "total_shots": 300000,
+  "pub_order": [
+    {
+      "pub": 0,
+      "block": 0,
+      "tau_us": 0,
+      "logical": 0
+    },
+    {
+      "pub": 1,
+      "block": 0,
+      "tau_us": 0,
+      "logical": 1
+    },
+    {
+      "pub": 2,
+      "block": 0,
+      "tau_us": 5,
+      "logical": 0
+    },
+    {
+      "pub": 3,
+      "block": 0,
+      "tau_us": 5,
+      "logical": 1
+    },
+    {
+      "pub": 4,
+      "block": 0,
+      "tau_us": 15,
+      "logical": 0
+    },
+    {
+      "pub": 5,
+      "block": 0,
+      "tau_us": 15,
+      "logical": 1
+    },
+    {
+      "pub": 6,
+      "block": 1,
+      "tau_us": 0,
+      "logical": 0
+    },
+    {
+      "pub": 7,
+      "block": 1,
+      "tau_us": 0,
+      "logical": 1
+    },
+    {
+      "pub": 8,
+      "block": 1,
+      "tau_us": 5,
+      "logical": 0
+    },
+    {
+      "pub": 9,
+      "block": 1,
+      "tau_us": 5,
+      "logical": 1
+    },
+    {
+      "pub": 10,
+      "block": 1,
+      "tau_us": 15,
+      "logical": 0
+    },
+    {
+      "pub": 11,
+      "block": 1,
+      "tau_us": 15,
+      "logical": 1
+    },
+    {
+      "pub": 12,
+      "block": 2,
+      "tau_us": 0,
+      "logical": 0
+    },
+    {
+      "pub": 13,
+      "block": 2,
+      "tau_us": 0,
+      "logical": 1
+    },
+    {
+      "pub": 14,
+      "block": 2,
+      "tau_us": 5,
+      "logical": 0
+    },
+    {
+      "pub": 15,
+      "block": 2,
+      "tau_us": 5,
+      "logical": 1
+    },
+    {
+      "pub": 16,
+      "block": 2,
+      "tau_us": 15,
+      "logical": 0
+    },
+    {
+      "pub": 17,
+      "block": 2,
+      "tau_us": 15,
+      "logical": 1
+    },
+    {
+      "pub": 18,
+      "block": 3,
+      "tau_us": 0,
+      "logical": 0
+    },
+    {
+      "pub": 19,
+      "block": 3,
+      "tau_us": 0,
+      "logical": 1
+    },
+    {
+      "pub": 20,
+      "block": 3,
+      "tau_us": 5,
+      "logical": 0
+    },
+    {
+      "pub": 21,
+      "block": 3,
+      "tau_us": 5,
+      "logical": 1
+    },
+    {
+      "pub": 22,
+      "block": 3,
+      "tau_us": 15,
+      "logical": 0
+    },
+    {
+      "pub": 23,
+      "block": 3,
+      "tau_us": 15,
+      "logical": 1
+    },
+    {
+      "pub": 24,
+      "block": 4,
+      "tau_us": 0,
+      "logical": 0
+    },
+    {
+      "pub": 25,
+      "block": 4,
+      "tau_us": 0,
+      "logical": 1
+    },
+    {
+      "pub": 26,
+      "block": 4,
+      "tau_us": 5,
+      "logical": 0
+    },
+    {
+      "pub": 27,
+      "block": 4,
+      "tau_us": 5,
+      "logical": 1
+    },
+    {
+      "pub": 28,
+      "block": 4,
+      "tau_us": 15,
+      "logical": 0
+    },
+    {
+      "pub": 29,
+      "block": 4,
+      "tau_us": 15,
+      "logical": 1
+    }
+  ],
+  "circuits": [
+    {
+      "name": "rep3_r9_L0_tau0",
+      "tau_us": 0,
+      "tau_dt": 0,
+      "logical": 0,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 108,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10
+      },
+      "estimated_duration_us": 42.52
+    },
+    {
+      "name": "rep3_r9_L1_tau0",
+      "tau_us": 0,
+      "tau_dt": 0,
+      "logical": 1,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 109,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10,
+        "x": 3
+      },
+      "estimated_duration_us": 42.55
+    },
+    {
+      "name": "rep3_r9_L0_tau5",
+      "tau_us": 5,
+      "tau_dt": 1248,
+      "logical": 0,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 108,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "delay": 27,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10
+      },
+      "estimated_duration_us": 87.16
+    },
+    {
+      "name": "rep3_r9_L1_tau5",
+      "tau_us": 5,
+      "tau_dt": 1248,
+      "logical": 1,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 109,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "delay": 27,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10,
+        "x": 3
+      },
+      "estimated_duration_us": 87.19
+    },
+    {
+      "name": "rep3_r9_L0_tau15",
+      "tau_us": 15,
+      "tau_dt": 3744,
+      "logical": 0,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 108,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "delay": 27,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10
+      },
+      "estimated_duration_us": 177.02
+    },
+    {
+      "name": "rep3_r9_L1_tau15",
+      "tau_us": 15,
+      "tau_dt": 3744,
+      "logical": 1,
+      "layout": [
+        147,
+        149,
+        151,
+        148,
+        150
+      ],
+      "depth": 109,
+      "ops": {
+        "rz": 72,
+        "sx": 36,
+        "cz": 36,
+        "delay": 27,
+        "measure": 21,
+        "reset": 16,
+        "barrier": 10,
+        "x": 3
+      },
+      "estimated_duration_us": 177.05
+    }
+  ],
+  "qubit_order": "layout lists physical qubits for d0, d1, d2, a0, a1",
+  "dt_s": 4e-09,
+  "transpile": "generate_preset_pass_manager(optimization_level=1, initial_layout=LAYOUT)",
+  "options": {
+    "dynamical_decoupling": false,
+    "twirling_gates": false,
+    "twirling_measure": false
+  },
+  "estimated_qpu_s": 105.7,
+  "calibration_last_update": "2026-11-24 21:58:11+00:00",
+  "chain_calibration": {
+    "147": {
+      "T1": 0.0003354623959259883,
+      "T2": 9.36809329924963e-05,
+      "readout_error": 0.00537109375
+    },
+    "149": {
+      "T1": 0.00039067611563940084,
+      "T2": 0.00043769169089141,
+      "readout_error": 0.00341796875
+    },
+    "151": {
+      "T1": 0.0002978422826184407,
+      "T2": 0.00025247190376230776,
+      "readout_error": 0.0123291015625
+    },
+    "148": {
+      "T1": 0.0003613102684705386,
+      "T2": 0.00029721538837067485,
+      "readout_error": 0.0029296875
+    },
+    "150": {
+      "T1": 0.0004111138802660737,
+      "T2": 0.0004030803221857467,
+      "readout_error": 0.0079345703125
+    }
+  },
+  "qiskit": "2.5.2",
+  "qiskit_ibm_runtime": "0.52.1",
+  "authorisation": "student, chat, 2026-11-24: '授权，写脚本并提交'",
+  "status": "DONE",
+  "metrics": {
+    "caller": "qiskit",
+    "qiskit_version": "qiskit_ibm_runtime-0.52.1,qiskit-2.5.2*,qiskit_aer-0.17.2",
+    "timestamps": {
+      "created": "2026-11-24T22:11:22.171005Z",
+      "finished": "2026-11-24T22:13:27.220997Z",
+      "running": "2026-11-24T22:11:23.724015Z"
+    },
+    "usage": {
+      "qpu_charge_time_seconds": 111,
+      "value": 1.835503,
+      "unit": "resource_units",
+      "status": "complete",
+      "details": [
+        {
+          "value": 1.835503,
+          "unit": "resource_units",
+          "metric": {
+            "id": "caffe3ca-729c-5750-8777-df63bbf8bfd9",
+            "value": 111
+          }
+        }
+      ]
+    },
+    "circuits_execution_time_ns": 108367964160
+  },
+  "raw_file": "e3_ibm_v2_raw.npz"
+}

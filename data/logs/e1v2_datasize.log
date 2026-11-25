@@ -1,0 +1,244 @@
+transformer n_train_unique=45,000
+  epoch=1 val_P_L=0.09428
+  epoch=2 val_P_L=0.06345
+  epoch=3 val_P_L=0.05126
+  epoch=4 val_P_L=0.04970
+  epoch=5 val_P_L=0.05257
+  epoch=6 val_P_L=0.05019
+  epoch=7 val_P_L=0.04614
+  epoch=8 val_P_L=0.04621
+  epoch=9 val_P_L=0.04302
+  epoch=10 val_P_L=0.04220
+  epoch=11 val_P_L=0.04188
+  epoch=12 val_P_L=0.04519
+  epoch=13 val_P_L=0.04217
+  epoch=14 val_P_L=0.04022
+  epoch=15 val_P_L=0.04433
+  epoch=16 val_P_L=0.03979
+  epoch=17 val_P_L=0.03934
+  epoch=18 val_P_L=0.03971
+  epoch=19 val_P_L=0.04011
+  epoch=20 val_P_L=0.03964
+  epoch=21 val_P_L=0.03954
+  epoch=22 val_P_L=0.04174
+  epoch=23 val_P_L=0.04105
+  epoch=24 val_P_L=0.03914
+  epoch=25 val_P_L=0.04097
+  epoch=26 val_P_L=0.03927
+  epoch=27 val_P_L=0.03951
+  epoch=28 val_P_L=0.03963
+  epoch=29 val_P_L=0.03982
+  epoch=30 val_P_L=0.03962
+  epoch=31 val_P_L=0.04134
+  epoch=32 val_P_L=0.03964
+  epoch=33 val_P_L=0.03970
+  epoch=34 val_P_L=0.03970
+saved transformer / 45000 / 50 / 0 P_L=0.03983
+mlp n_train_unique=45,000
+  epoch=1 val_P_L=0.09400
+  epoch=2 val_P_L=0.09962
+  epoch=3 val_P_L=0.09723
+  epoch=4 val_P_L=0.09336
+  epoch=5 val_P_L=0.06618
+  epoch=6 val_P_L=0.05190
+  epoch=7 val_P_L=0.04979
+  epoch=8 val_P_L=0.04899
+  epoch=9 val_P_L=0.04813
+  epoch=10 val_P_L=0.04801
+  epoch=11 val_P_L=0.04548
+  epoch=12 val_P_L=0.04437
+  epoch=13 val_P_L=0.04287
+  epoch=14 val_P_L=0.04209
+  epoch=15 val_P_L=0.04145
+  epoch=16 val_P_L=0.04096
+  epoch=17 val_P_L=0.04091
+  epoch=18 val_P_L=0.04056
+  epoch=19 val_P_L=0.04041
+  epoch=20 val_P_L=0.03997
+  epoch=21 val_P_L=0.04034
+  epoch=22 val_P_L=0.04025
+  epoch=23 val_P_L=0.03968
+  epoch=24 val_P_L=0.03945
+  epoch=25 val_P_L=0.03945
+  epoch=26 val_P_L=0.03958
+  epoch=27 val_P_L=0.03909
+  epoch=28 val_P_L=0.03909
+  epoch=29 val_P_L=0.03911
+  epoch=30 val_P_L=0.03911
+  epoch=31 val_P_L=0.03961
+  epoch=32 val_P_L=0.03898
+  epoch=33 val_P_L=0.03910
+  epoch=34 val_P_L=0.03880
+  epoch=35 val_P_L=0.03875
+  epoch=36 val_P_L=0.03898
+  epoch=37 val_P_L=0.03898
+  epoch=38 val_P_L=0.03877
+  epoch=39 val_P_L=0.03880
+  epoch=40 val_P_L=0.03864
+  epoch=41 val_P_L=0.03885
+  epoch=42 val_P_L=0.03880
+  epoch=43 val_P_L=0.03866
+  epoch=44 val_P_L=0.03868
+  epoch=45 val_P_L=0.03873
+  epoch=46 val_P_L=0.03864
+  epoch=47 val_P_L=0.03866
+  epoch=48 val_P_L=0.03864
+  epoch=49 val_P_L=0.03871
+  epoch=50 val_P_L=0.03869
+saved mlp / 45000 / 50 / 0 P_L=0.03910
+transformer n_train_unique=150,000
+  epoch=1 val_P_L=0.05310
+  epoch=2 val_P_L=0.05066
+  epoch=3 val_P_L=0.04675
+  epoch=4 val_P_L=0.04091
+  epoch=5 val_P_L=0.03947
+  epoch=6 val_P_L=0.03887
+  epoch=7 val_P_L=0.03864
+  epoch=8 val_P_L=0.03877
+  epoch=9 val_P_L=0.03854
+  epoch=10 val_P_L=0.03791
+  epoch=11 val_P_L=0.03981
+  epoch=12 val_P_L=0.03857
+  epoch=13 val_P_L=0.03677
+  epoch=14 val_P_L=0.03862
+  epoch=15 val_P_L=0.03732
+  epoch=16 val_P_L=0.03737
+  epoch=17 val_P_L=0.03752
+  epoch=18 val_P_L=0.03723
+  epoch=19 val_P_L=0.03755
+  epoch=20 val_P_L=0.03806
+  epoch=21 val_P_L=0.03801
+  epoch=22 val_P_L=0.03733
+  epoch=23 val_P_L=0.03745
+saved transformer / 150000 / 50 / 0 P_L=0.03733
+mlp n_train_unique=150,000
+  epoch=1 val_P_L=0.10205
+  epoch=2 val_P_L=0.05715
+  epoch=3 val_P_L=0.04790
+  epoch=4 val_P_L=0.04257
+  epoch=5 val_P_L=0.03995
+  epoch=6 val_P_L=0.03907
+  epoch=7 val_P_L=0.03914
+  epoch=8 val_P_L=0.03841
+  epoch=9 val_P_L=0.03780
+  epoch=10 val_P_L=0.03778
+  epoch=11 val_P_L=0.03750
+  epoch=12 val_P_L=0.03769
+  epoch=13 val_P_L=0.03716
+  epoch=14 val_P_L=0.03717
+  epoch=15 val_P_L=0.03701
+  epoch=16 val_P_L=0.03726
+  epoch=17 val_P_L=0.03701
+  epoch=18 val_P_L=0.03719
+  epoch=19 val_P_L=0.03668
+  epoch=20 val_P_L=0.03669
+  epoch=21 val_P_L=0.03679
+  epoch=22 val_P_L=0.03660
+  epoch=23 val_P_L=0.03681
+  epoch=24 val_P_L=0.03684
+  epoch=25 val_P_L=0.03633
+  epoch=26 val_P_L=0.03652
+  epoch=27 val_P_L=0.03635
+  epoch=28 val_P_L=0.03639
+  epoch=29 val_P_L=0.03637
+  epoch=30 val_P_L=0.03680
+  epoch=31 val_P_L=0.03649
+  epoch=32 val_P_L=0.03661
+  epoch=33 val_P_L=0.03646
+  epoch=34 val_P_L=0.03639
+  epoch=35 val_P_L=0.03662
+saved mlp / 150000 / 50 / 0 P_L=0.03690
+transformer n_train_unique=500,000
+  epoch=1 val_P_L=0.04147
+  epoch=2 val_P_L=0.03846
+  epoch=3 val_P_L=0.03807
+  epoch=4 val_P_L=0.03728
+  epoch=5 val_P_L=0.03699
+  epoch=6 val_P_L=0.03642
+  epoch=7 val_P_L=0.03654
+  epoch=8 val_P_L=0.03691
+  epoch=9 val_P_L=0.03581
+  epoch=10 val_P_L=0.03581
+  epoch=11 val_P_L=0.03513
+  epoch=12 val_P_L=0.03545
+  epoch=13 val_P_L=0.03563
+  epoch=14 val_P_L=0.03545
+  epoch=15 val_P_L=0.03506
+  epoch=16 val_P_L=0.03528
+  epoch=17 val_P_L=0.03513
+  epoch=18 val_P_L=0.03525
+  epoch=19 val_P_L=0.03521
+  epoch=20 val_P_L=0.03519
+saved transformer / 500000 / 20 / 0 P_L=0.03578
+mlp n_train_unique=500,000
+  epoch=1 val_P_L=0.04700
+  epoch=2 val_P_L=0.03846
+  epoch=3 val_P_L=0.03820
+  epoch=4 val_P_L=0.03707
+  epoch=5 val_P_L=0.03667
+  epoch=6 val_P_L=0.03644
+  epoch=7 val_P_L=0.03636
+  epoch=8 val_P_L=0.03610
+  epoch=9 val_P_L=0.03632
+  epoch=10 val_P_L=0.03610
+  epoch=11 val_P_L=0.03601
+  epoch=12 val_P_L=0.03574
+  epoch=13 val_P_L=0.03558
+  epoch=14 val_P_L=0.03576
+  epoch=15 val_P_L=0.03562
+  epoch=16 val_P_L=0.03554
+  epoch=17 val_P_L=0.03567
+  epoch=18 val_P_L=0.03561
+  epoch=19 val_P_L=0.03565
+  epoch=20 val_P_L=0.03565
+saved mlp / 500000 / 20 / 0 P_L=0.03600
+transformer n_train_unique=1,000,000
+  epoch=1 val_P_L=0.03866
+  epoch=2 val_P_L=0.03961
+  epoch=3 val_P_L=0.03648
+  epoch=4 val_P_L=0.03624
+  epoch=5 val_P_L=0.03631
+  epoch=6 val_P_L=0.03522
+  epoch=7 val_P_L=0.03503
+  epoch=8 val_P_L=0.03475
+  epoch=9 val_P_L=0.03461
+  epoch=10 val_P_L=0.03467
+saved transformer / 1000000 / 10 / 0 P_L=0.03516
+mlp n_train_unique=1,000,000
+  epoch=1 val_P_L=0.03846
+  epoch=2 val_P_L=0.03716
+  epoch=3 val_P_L=0.03680
+  epoch=4 val_P_L=0.03590
+  epoch=5 val_P_L=0.03576
+  epoch=6 val_P_L=0.03559
+  epoch=7 val_P_L=0.03557
+  epoch=8 val_P_L=0.03546
+  epoch=9 val_P_L=0.03544
+  epoch=10 val_P_L=0.03539
+saved mlp / 1000000 / 10 / 0 P_L=0.03590
+transformer n_train_unique=2,000,000
+  epoch=1 val_P_L=0.03756
+  epoch=2 val_P_L=0.03610
+  epoch=3 val_P_L=0.03505
+  epoch=4 val_P_L=0.03453
+  epoch=5 val_P_L=0.03438
+saved transformer / 2000000 / 5 / 0 P_L=0.03497
+mlp n_train_unique=2,000,000
+  epoch=1 val_P_L=0.03724
+  epoch=2 val_P_L=0.03594
+  epoch=3 val_P_L=0.03549
+  epoch=4 val_P_L=0.03521
+  epoch=5 val_P_L=0.03528
+saved mlp / 2000000 / 5 / 0 P_L=0.03583
+transformer n_train_unique=5,000,000
+  epoch=1 val_P_L=0.03576
+  epoch=2 val_P_L=0.03436
+saved transformer / 5000000 / 2 / 0 P_L=0.03495
+mlp n_train_unique=5,000,000
+  epoch=1 val_P_L=0.03565
+  epoch=2 val_P_L=0.03535
+saved mlp / 5000000 / 2 / 0 P_L=0.03582
+transformer n_train_unique=10,000,000
+saved transformer / 10000000 / 1 / 0 P_L=0.03523
+mlp n_train_unique=10,000,000
+saved mlp / 10000000 / 1 / 0 P_L=0.03576

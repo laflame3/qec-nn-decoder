@@ -1,0 +1,125 @@
+{
+  "background_channels": [
+    "after_clifford_depolarization",
+    "after_reset_flip_probability",
+    "before_measure_flip_probability"
+  ],
+  "basis": "Z",
+  "batch": 1024,
+  "calibration_bounds": [
+    0.0001,
+    0.05
+  ],
+  "calibration_failure_relative_error": 0.01,
+  "calibration_max_iterations": 40,
+  "calibration_shots": 1000000,
+  "calibration_stop_relative_error": 0.002,
+  "calibration_target": "DEP at idle_prob=0.005",
+  "circuit": "surface_code:rotated_memory_z",
+  "decay": "cosine",
+  "density_unit": "mean lit detectors per shot",
+  "dep_source": "legacy f=0 masks and CSV, with same test set regenerated for density",
+  "device": "mps",
+  "distance": 3,
+  "evaluation_batch": 4096,
+  "hyperparameters": {
+    "mlp": {
+      "lr": 0.001,
+      "n_layers": 3
+    },
+    "transformer": {
+      "lr": 0.001,
+      "n_layers": 3
+    }
+  },
+  "kinds": [
+    "DEP",
+    "X",
+    "Y",
+    "XX",
+    "YY"
+  ],
+  "loss": "BCEWithLogitsLoss",
+  "n_detectors": 24,
+  "n_test": 1000000,
+  "n_train": 10000000,
+  "n_val": 200000,
+  "optimizer": "AdamW",
+  "p_bg": 0.005,
+  "pm": {
+    "dem": "basis_decomposed_dem",
+    "enable_correlations": true,
+    "name": "PM-correlated"
+  },
+  "prediction_bits": "NumPy packbits with big bit order",
+  "prediction_rule": "logit > 0",
+  "rounds": 3,
+  "script": "src/run_e1_structure.py",
+  "seeds": {
+    "DEP": {
+      "calibration": 70000,
+      "test": 20261121,
+      "train": {
+        "mlp": 40010,
+        "transformer": 40000
+      },
+      "validation": 30000
+    },
+    "X": {
+      "calibration": 70001,
+      "test": 71001,
+      "train": {
+        "mlp": 73011,
+        "transformer": 73010
+      },
+      "validation": 72001
+    },
+    "XX": {
+      "calibration": 70003,
+      "test": 71003,
+      "train": {
+        "mlp": 73031,
+        "transformer": 73030
+      },
+      "validation": 72003
+    },
+    "Y": {
+      "calibration": 70002,
+      "test": 71002,
+      "train": {
+        "mlp": 73021,
+        "transformer": 73020
+      },
+      "validation": 72002
+    },
+    "YY": {
+      "calibration": 70004,
+      "test": 71004,
+      "train": {
+        "mlp": 73041,
+        "transformer": 73040
+      },
+      "validation": 72004
+    }
+  },
+  "smoke": false,
+  "statistics": {
+    "delta": "paired NN minus PM, 95% Wald CI",
+    "mcnemar": "exact binomial, two-sided",
+    "ratio": "paired delta method, 95% CI"
+  },
+  "streaming_validation_batch": 65536,
+  "torch_seed": 0,
+  "train_chunk": 500000,
+  "validation_selection": "earliest minimum validation P_L",
+  "versions": {
+    "numpy": "2.5.3",
+    "pymatching": "2.4.0",
+    "python": "3.12.13",
+    "scipy": "1.18.1",
+    "stim": "1.16.0",
+    "torch": "2.15.0"
+  },
+  "warmup_fraction": 0.02,
+  "weight_decay": 0.0001
+}
